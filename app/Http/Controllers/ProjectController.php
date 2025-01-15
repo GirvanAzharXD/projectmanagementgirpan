@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Inertia\Response;
 use Inertia\ResponseFactory;
+use Illuminate\Support\Str;
+
 
 class ProjectController extends Controller
 {
@@ -147,7 +149,7 @@ class ProjectController extends Controller
             if ($project->image_path) {
                 Storage::disk('public')->delete($project->image_path);
             }
-            $data['image_path'] = $image->store('projects/' . $data['name'], 'public');
+            $data['image_path'] = $image->store('projects/' . Str::slug($data['name']), 'public');
         }
 
         // Update the project

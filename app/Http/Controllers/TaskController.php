@@ -158,7 +158,7 @@ class TaskController extends Controller
 
         // Use the query parameters in the Task model query
         $tasks = Task::query()
-            ->where('assigned_to', $user->id)
+            ->where('assigned_user_id', $user->id)
             ->when($request->input('name'), fn($query, $name) => $query->where('name', 'like', '%' . $name . '%'))
             ->when($request->input('status'), fn($query, $status) => $query->where('status', $status))
             ->orderBy($sortField, $sortOrder)

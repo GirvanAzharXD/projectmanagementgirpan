@@ -28,7 +28,7 @@ export default function Show({auth, project, tasks, queryParams, success}) {
           }
           <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div>
-              <img src={project.image_path} alt={project.name} className={"w-full h-64 object-cover"}/>
+              <img src={project.image_path} alt={project.name} className={"w-full h-full object-cover"}/>
             </div>
             <div className="p-6 text-gray-900 dark:text-gray-100">
 

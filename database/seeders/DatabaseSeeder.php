@@ -6,6 +6,8 @@ use App\Models\Project;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,11 +18,19 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Pouya sadri',
-            'email' => 'pouya@example.com',
-            'password' => bcrypt('password'),
-            'email_verified_at' => time(),
+        User::factory()->createMany([
+            [
+                'name' => 'Girvan Azhar',
+                'email' => 'admin@example.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => time(),
+            ],
+            [
+                'name' => 'Lah Girvan',
+                'email' => 'admin@admin.com',
+                'password' => Hash::make('password'),
+                'email_verified_at' => time(),
+            ],
         ]);
 
         Project::factory()->count(30)->hasTasks(30)->create();
