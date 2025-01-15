@@ -40,7 +40,7 @@ library.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/pouyasadri/Project-Management.git`
+1. Clone the repository: `git clone https://github.com/GirvanAzharXD/ujiangirpan.git`
 2. Navigate to the project directory: `cd project-management-app`
 3. Install PHP dependencies: `composer install`
 4. Install JavaScript dependencies: `npm install`
