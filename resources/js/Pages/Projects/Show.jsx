@@ -13,7 +13,7 @@ export default function Show({auth, project, tasks, queryParams, success}) {
             className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">{`Project "${project.name}"`}</h2>
           <Link href={route('projects.edit', project.id)}
                 className={"bg-amber-500 py-1 px-3 text-white rounded shadow transition-all hover:bg-amber-600"}
-          >Edit< /Link>
+          >Edit</Link>
         </div>
       }
     >
